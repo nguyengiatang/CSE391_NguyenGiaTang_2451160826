@@ -1,0 +1,136 @@
+<!DOCTYPE html> <!-- khai báo HTML5 -->
+<html lang="vi"> <!-- ngôn ngữ tiếng Việt -->
+
+<head>
+    <meta charset="UTF-8"> <!-- mã hóa ký tự -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive -->
+    <title>Nguyễn Gia Tăng</title> <!-- title chứa tên -->
+</head>
+<body>
+    <header> <!-- header: phần đầu trang -->
+    <nav> <!-- nav: điều hướng -->
+        <ul> <!-- ul: danh sách menu -->
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#products">Sản phẩm</a></li>
+            <li><a href="#compare">So sánh</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main> <!-- main: nội dung chính -->
+
+    <section id="products"> <!-- section: khu vực sản phẩm nổi bật -->
+        <h2>Sản phẩm nổi bật</h2>
+
+        <!-- Product 1 -->
+        <article> <!-- article: mỗi sản phẩm là nội dung độc lập -->
+            <figure> <!-- figure: nhóm ảnh -->
+                <img src="https://placehold.co/300x200" alt="Sản phẩm 1">
+            </figure>
+            <h3>Iphone 12</h3> <!-- tên -->
+            <p>Màn hình lớn</p> <!-- mô tả -->
+            <p><strong>10.000.000đ</strong></p> <!-- giá -->
+            <a href="#">Mua ngay</a> <!-- link -->
+        </article>
+
+        <!-- Product 2 -->
+        <article>
+            <figure>
+                <img src="https://placehold.co/300x200" alt="Sản phẩm 2">            
+            </figure>
+            <h3>Iphone 13</h3>
+            <p>Camera siêu nét</p>
+            <p><mark>12.000.000đ</mark></p> <!-- dùng mark -->
+            <a href="#">Mua ngay</a>
+        </article>
+
+        <!-- Product 3 -->
+        <article>
+            <figure>
+                <img src="https://placehold.co/300x200" alt="Sản phẩm 3">
+            </figure>
+            <h3>Iphone 14</h3>
+            <p>Pin dung lượng lớn</p>
+            <p><strong>15.000.000đ</strong></p>
+            <a href="#">Mua ngay</a>
+        </article>
+
+        <!-- Product 4 -->
+        <article>
+            <figure>
+                <img src="https://placehold.co/300x200" alt="Sản phẩm 4">
+            </figure>
+            <h3>Iphone 15</h3>
+            <p>Chân sạc type-C</p>
+            <p><strong>20.000.000đ</strong></p>
+            <a href="#">Mua ngay</a>
+        </article>
+
+    </section>
+
+    <section id="compare"> <!-- section: bảng so sánh -->
+        <h2>Bảng so sánh</h2>
+
+        <table border="1"> <!-- table: dữ liệu dạng bảng -->
+            <thead>
+                <tr>
+                    <th rowspan="2">Tiêu chí</th> <!-- rowspan: gộp hàng -->
+                    <th colspan="4">Iphone</th> <!-- colspan: gộp cột -->
+                </tr>
+                <tr>
+                    <th>12</th>
+                    <th>13</th>
+                    <th>14</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Giá</td>
+                    <td>10tr</td>
+                    <td>12tr</td>
+                    <td>15tr</td>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td>8GB</td>
+                    <td>12GB</td>
+                    <td>16GB</td>
+                </tr>
+                <tr>
+                    <td>Bộ nhớ</td>
+                    <td>128GB</td>
+                    <td>256GB</td>
+                    <td>512GB</td>
+                </tr>
+                <tr>
+                    <td>Pin</td>
+                    <td>4000mAh</td>
+                    <td>4500mAh</td>
+                    <td>5000mAh</td>
+                </tr>
+                <tr>
+                    <td>Camera</td>
+                    <td>12MP</td>
+                    <td>48MP</td>
+                    <td>64MP</td>
+                  
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="4">Thông tin chỉ mang tính tham khảo</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+</main>
+
+<footer> <!-- footer: phần cuối -->
+    <a href="#">Chính sách</a> <!-- hyperlink -->
+    <a href="#">Liên hệ</a>
+    <a href="#">FAQ</a>
+</footer>
+</body>
