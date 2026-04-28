@@ -192,3 +192,33 @@ Ví dụ cụ thể: một trang sản phẩm. Dùng <article> cho sản phẩm,
 
 Tuy vậy, <div> vẫn phù hợp trong các trường hợp không mang ý nghĩa nội dung, ví dụ: bọc layout, chia cột, hoặc làm container cho CSS/JS (grid, flex). Tóm lại, semantic HTML không phải “tốn thời gian”, mà là đầu tư để trang web dễ hiểu, dễ truy cập và tối ưu hơn.
 
+B3:
+Lỗi 1: Dòng 1 — <!DOCTYPE> sai cú pháp — Sửa thành <!DOCTYPE html>
+
+Lỗi 2: Dòng 2 — Thiếu thuộc tính lang — Thêm lang="vi" vào thẻ html
+
+Lỗi 3: Dòng 4 — Thẻ <title> không đóng — Thêm </title>
+
+Lỗi 4: Dòng 5 — charset viết sai (utf8) — Sửa thành UTF-8
+
+Lỗi 5: Dòng 8 — Thẻ <h1> không đóng đúng — Sửa thành </h1>
+
+Lỗi 6: Dòng 12 — Thẻ <a> không đóng — Sửa thành </a>
+
+Lỗi 7: Dòng 19 — src không có dấu "" — Thêm dấu "iphone.jpg"
+
+Lỗi 8: Dòng 21 — Thẻ <b> đóng sai vị trí — Sửa thành <strong>...</strong>
+
+Lỗi 9: Dòng 26 — Table thiếu thead/tbody — Thêm cấu trúc chuẩn
+
+Lỗi 10: Dòng 28 — Dùng <td> cho header — Sửa thành <th>
+
+Lỗi 11: Dòng 36 — Dùng 2 thẻ <main> — Chỉ được dùng 1, thay cái thứ 2 bằng <aside>
+
+Lỗi 12: Dòng 41 — Thẻ <p> trong footer không đóng — Thêm </p>
+
+Lỗi 13: Semantic — Thiếu <article> cho sản phẩm — Thêm <article>
+
+Lỗi 14: Semantic — Ảnh thiếu alt — Thêm thuộc tính alt
+
+Lỗi 15: Semantic — Dùng <h3> không hợp lý — Sửa thành <h2>
