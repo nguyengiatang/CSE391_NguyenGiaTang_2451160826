@@ -244,3 +244,6 @@ method="get"
 Dữ liệu tìm kiếm được gửi qua URL
 
 <input type="text" ...> được dùng
+
+
+link drive Phần D : https://docs.google.com/videos/d/1W-cC-sokPY1F_xLgl8qdOww8iOO_ldd8PmsQMgfbkxo/edit?usp=sharing
