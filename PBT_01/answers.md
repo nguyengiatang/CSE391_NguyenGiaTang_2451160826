@@ -222,3 +222,25 @@ Lỗi 13: Semantic — Thiếu <article> cho sản phẩm — Thêm <article>
 Lỗi 14: Semantic — Ảnh thiếu alt — Thêm thuộc tính alt
 
 Lỗi 15: Semantic — Dùng <h3> không hợp lý — Sửa thành <h2>
+
+
+B4:
+1. Các thẻ semantic HTML5 tìm thấy (trên tiki.vn)
+ <header>
+Vị trí: Phần đầu trang (logo Tiki, thanh tìm kiếm, tài khoản, giỏ hàng)
+Chức năng: Chứa phần giới thiệu + điều hướng chính của website
+ <main>
+Vị trí: Khu vực nội dung chính (banner, flash sale, sản phẩm nổi bật,…)
+Chức năng: Chứa toàn bộ nội dung chính của trang web
+ <footer>
+Vị trí: Cuối trang web
+Chức năng: Chứa thông tin liên hệ, chính sách, bản quyền, ứng dụng,...
+
+2. Không thấy table nào trong trang do trang sử dụng flex box và Grid
+3.
+action="/search"
+Khi bấm “Tìm kiếm”, trình duyệt chuyển sang trang /search
+method="get"
+Dữ liệu tìm kiếm được gửi qua URL
+
+<input type="text" ...> được dùng
