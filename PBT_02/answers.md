@@ -160,3 +160,5 @@ XSS (chèn script)
 -> Có thể:
 Lấy cắp dữ liệu
 Phá hệ thống
+
+Link drive phần D : https://docs.google.com/videos/d/1RLFVRYR0t_1xRRr0cASokrlCL6gFBw0uW8J4OaiU0R4/edit?usp=sharing
