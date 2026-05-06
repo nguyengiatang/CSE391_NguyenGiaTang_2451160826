@@ -1,0 +1,42 @@
+/* ===== RESET ===== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== GLOBAL ===== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text);
+    background: var(--color-light);
+    line-height: 1.6;
+}
+
+/* ===== TYPOGRAPHY BASE ===== */
+h1, h2, h3, h4 {
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* ===== LINKS ===== */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== MEDIA ===== */
+img {
+    max-width: 100%;
+    display: block;
+}
