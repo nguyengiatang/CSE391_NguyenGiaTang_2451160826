@@ -1,0 +1,60 @@
+/* ===== PORTFOLIO SECTION ===== */
+.portfolio-section {
+    padding: 5rem 2rem;
+}
+
+/* Title */
+.portfolio-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* ===== GRID ===== */
+.portfolio-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1.5rem;
+}
+
+/* ===== PORTFOLIO ITEM ===== */
+.portfolio-item {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+}
+
+/* Image */
+.portfolio-item img {
+    width: 100%;
+
+    aspect-ratio: 4/3;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* ===== TABLET ===== */
+@media (max-width: 1023px) {
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 767px) {
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
