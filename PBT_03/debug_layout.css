@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.container {
+    width: 960px;
+
+    margin: 20px auto;
+
+    border: 3px dashed black;
+
+    overflow: auto;
+}
+
+/* Style chung */
+.sidebar {
+    background: lightblue;
+
+    text-align: center;
+
+    padding-top: 40px;
+
+    min-height: 120px;
+}
+.broken .sidebar {
+    width: 300px;
+
+    padding: 20px;
+
+    border: 1px solid #333;
+
+    float: left;
+}
+
+.broken .content {
+    width: 660px;
+
+    padding: 30px;
+
+    border: 1px solid #333;
+
+    float: left;
+}
+
+/* =========================
+   2. Fix bằng border-box
+========================= */
+
+.fixed-border-box .sidebar,
+.fixed-border-box .content {
+    box-sizing: border-box;
+}
+
+.fixed-border-box .sidebar {
+    width: 300px;
+
+    padding: 20px;
+
+    border: 1px solid #333;
+
+    float: left;
+}
+
+.fixed-border-box .content {
+    width: 660px;
+
+    padding: 30px;
+
+    border: 1px solid #333;
+
+    float: left;
+}
+/* =========================
+   3. Fix bằng giảm width
+========================= */
+
+.fixed-manual .sidebar {
+    width: 300px;
+
+    padding: 20px;
+
+    border: 1px solid #333;
+
+    float: left;
+}
+
+.fixed-manual .content {
+    width: 556px;
+
+    padding: 30px;
+
+    border: 1px solid #333;
+
+    float: left;
+}
