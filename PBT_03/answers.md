@@ -906,6 +906,156 @@ Nên tổng width vẫn giữ nguyên:
 300px
 Content bên trong sẽ tự co lại để nhường chỗ cho padding và border.
 
+B3:
+# 1. Liệt kê 10 rules + specificity score
+
+/* Rule 1 */
+p {
+    color: black;
+}
+/* Specificity: (0,0,1) */
+
+/* Rule 2 */
+body p {
+    color: gray;
+}
+/* Specificity: (0,0,2) */
+
+/* Rule 3 */
+.text {
+    color: blue;
+}
+/* Specificity: (0,1,0) */
+
+/* Rule 4 */
+.highlight {
+    color: green;
+}
+/* Specificity: (0,1,0) */
+
+/* Rule 5 */
+p.text {
+    color: orange;
+}
+/* Specificity: (0,1,1) */
+
+/* Rule 6 */
+.text.highlight {
+    color: purple;
+}
+/* Specificity: (0,2,0) */
+
+/* Rule 7 */
+body .text.highlight {
+    color: brown;
+}
+/* Specificity: (0,2,1) */
+
+/* Rule 8 */
+#demo {
+    color: red;
+}
+/* Specificity: (1,0,0) */
+
+/* Rule 9 */
+p#demo {
+    color: pink;
+}
+/* Specificity: (1,0,1) */
+
+/* Rule 10 */
+#demo.text.highlight {
+    color: gold;
+}
+/* Specificity: (1,2,0) */
+```
+# 2. Element cuối cùng hiển thị màu gì?
+HTML:
+
+```html
+<p id="demo" class="text highlight">
+    Hello World
+</p>
+## Kết quả cuối cùng
+```text
+gold
+```
+Rule mạnh nhất là:
+
+```css
+#demo.text.highlight {
+    color: gold;
+}
+```
+Specificity:
+```text
+(1,2,0)
+```
+CSS ưu tiên:
+```text
+ID > Class > Element
+```
+nên rule có:
+
+- 1 ID
+- 2 class
+
+sẽ thắng tất cả các rule còn lại.
+# 3. Nếu thay đổi thứ tự rules trong file CSS thì sao?
+
+Kết quả KHÔNG đổi
+
+Element vẫn màu: gold
+# Giải thích
+
+Vì:
+```css
+#demo.text.highlight
+```
+có specificity cao nhất.
+CSS luôn ưu tiên:
+```text
+specificity cao hơn
+```
+
+trước khi xét:
+
+```text
+thứ tự xuất hiện
+```
+Thứ tự chỉ ảnh hưởng khi:
+```text
+2 rules có specificity bằng nhau
+```
+
+Ví dụ:
+
+```css
+.text {
+    color: blue;
+}
+
+.highlight {
+    color: green;
+}
+```
+
+Cả hai đều:
+
+```text
+(0,1,0)
+```
+
+Nếu element có cả 2 class:
+
+```html
+<p class="text highlight">
+```
+
+thì:
+
+```text
+rule viết SAU sẽ thắng
 
 
 
