@@ -847,6 +847,66 @@ B1:
 | Pseudo-class selector | `a:hover`, `tr:nth-child(even)` | Chọn theo trạng thái / vị trí |
 | Group selector | `table, th, td` | Chọn nhiều selector cùng lúc |
 
+B2:
+# Kết quả đo từ DevTools
+## Hộp 1 — `content-box`
+```css
+width: 300px;
+padding: 20px;
+border: 5px solid;
+box-sizing: content-box;
+```
+### Chiều rộng thực tế
+```text
+350px
+```
+### Cách tính
+```text
+300
++ 20 + 20
++ 5 + 5
+= 350px
+# Hộp 2 — `border-box`
+
+```css
+width: 300px;
+padding: 20px;
+border: 5px solid;
+box-sizing: border-box;
+
+### Chiều rộng thực tế
+```text
+300px
+```
+# Giải thích sự khác biệt
+## `content-box`
+Trong chế độ mặc định:
+
+```text
+width chỉ tính phần content
+```
+
+Padding và border được cộng thêm bên ngoài width.
+
+Nên:
+
+```text
+300 + padding + border = 350px
+## `border-box`
+
+Trong `border-box`:
+
+```text
+width đã bao gồm:
+- content
+- padding
+- border
+Nên tổng width vẫn giữ nguyên:
+```text
+300px
+Content bên trong sẽ tự co lại để nhường chỗ cho padding và border.
+
+
 
 
 

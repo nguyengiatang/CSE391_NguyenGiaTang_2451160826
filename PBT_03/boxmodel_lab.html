@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./boxmodel.css">
+</head>
+<body>
+    <h1>So sánh content-box và border-box</h1>
+
+    <div class="container">
+
+        <!-- Content-box -->
+        <div class="box content-box">
+            <h2>Content-box</h2>
+        </div>
+
+        <!-- Border-box -->
+        <div class="box border-box">
+            <h2>Border-box</h2>
+        </div>
+
+    </div>
+    <!-- =====================================
+     PHẦN 2 — LAYOUT 3 CỘT
+===================================== -->
+
+<section class="layout-demo">
+
+    <h2>1. Không dùng border-box (layout bị vỡ)</h2>
+
+    <div class="layout-container no-border-box">
+
+        <div class="sidebar">
+            <h3>Sidebar</h3>
+
+            <p>
+                width: 250px <br>
+                padding: 15px
+            </p>
+        </div>
+
+        <div class="content">
+            <h3>Content</h3>
+
+            <p>
+                width: 500px <br>
+                padding: 20px
+            </p>
+        </div>
+
+        <div class="ads">
+            <h3>Ads</h3>
+
+            <p>
+                width: 250px <br>
+                padding: 15px
+            </p>
+        </div>
+
+    </div>
+
+    <!-- ================================= -->
+
+    <h2>2. Dùng border-box (layout đúng)</h2>
+
+    <div class="layout-container with-border-box">
+
+        <div class="sidebar">
+            <h3>Sidebar</h3>
+
+            <p>
+                width: 250px <br>
+                padding: 15px
+            </p>
+        </div>
+
+        <div class="content">
+            <h3>Content</h3>
+
+            <p>
+                width: 500px <br>
+                padding: 20px
+            </p>
+        </div>
+
+        <div class="ads">
+            <h3>Ads</h3>
+
+            <p>
+                width: 250px <br>
+                padding: 15px
+            </p>
+        </div>
+
+    </div>
+
+</section>
+</body>
+</html>
