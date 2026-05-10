@@ -1,0 +1,235 @@
+/* Reset box model */
+* {
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f4f6f9;
+
+    color: #333;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+
+    color: white;
+
+    padding: 25px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+nav ul {
+    list-style: none;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: #f0f0f0;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+/* Hover */
+nav a:hover {
+    color: yellow;
+
+    text-decoration: underline;
+}
+
+/* Active link */
+nav a.active {
+    background-color: white;
+
+    color: #1e3c72;
+
+    padding: 8px 14px;
+
+    border-radius: 6px;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+main {
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 30px auto;
+}
+
+section {
+    background-color: white;
+
+    padding: 25px;
+
+    margin-bottom: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   IMAGE
+========================= */
+figure {
+    text-align: center;
+}
+
+figure img {
+    border-radius: 50%;
+
+    border: 4px solid #2a5298;
+
+    margin-top: 15px;
+
+    max-width: 100%;
+
+    height: auto;
+}
+
+figcaption {
+    margin-top: 10px;
+
+    font-style: italic;
+
+    color: #666;
+}
+
+/* =========================
+   TABLE
+========================= */
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+}
+
+/* Table border */
+table,
+th,
+td {
+    border: 1px solid #ccc;
+}
+
+/* Header row */
+thead {
+    background-color: #1e3c72;
+
+    color: white;
+}
+
+th,
+td {
+    padding: 12px;
+
+    text-align: center;
+}
+
+/* Zebra striping */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover row */
+tbody tr:hover {
+    background-color: #dbe9ff;
+
+    transition: 0.3s;
+}
+
+/* =========================
+   CONTACT
+========================= */
+#contact {
+    background-color: white;
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 0 auto 30px;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Descendant selector */
+#contact p {
+    margin: 10px 0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: #222;
+
+    color: #ccc;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+/* =========================
+   EXTRA SELECTORS
+========================= */
+
+/* Element selector */
+h2 {
+    color: #1e3c72;
+}
+
+/* Class selector */
+.active {
+    font-weight: bold;
+}
+
+/* ID selector */
+#skills {
+    border-left: 5px solid #2a5298;
+}
+
+/* Descendant selector */
+nav a {
+    letter-spacing: 0.5px;
+}
+
+/* Pseudo-class selector */
+tbody tr:hover td {
+    color: #000;
+}

@@ -834,6 +834,19 @@ green
 | "Sản phẩm B" | `20px` | `blue` |
 | "Mô tả sản phẩm B" | — | `green` |
 
+Phần B:
+B1:
+# Các loại selectors đã sử dụng trong file CSS
+
+| Loại selector | Ví dụ trong CSS | Ý nghĩa |
+|---|---|---|
+| Element selector | `body`, `header`, `table`, `footer` | Chọn theo tên thẻ HTML |
+| Class selector | `.active`, `.container` | Chọn theo class |
+| ID selector | `#contact`, `#skills` | Chọn theo id |
+| Descendant selector | `nav a`, `#contact p` | Chọn phần tử con bên trong phần tử khác |
+| Pseudo-class selector | `a:hover`, `tr:nth-child(even)` | Chọn theo trạng thái / vị trí |
+| Group selector | `table, th, td` | Chọn nhiều selector cùng lúc |
+
 
 
 
