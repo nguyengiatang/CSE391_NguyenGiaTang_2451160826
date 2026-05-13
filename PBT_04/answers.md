@@ -337,4 +337,234 @@ C1:
 | 4. Footer 4 cột | Grid hoặc Flexbox | Nếu chỉ cần 4 cột đơn giản → Flexbox đủ dùng. Nếu cần kiểm soát cột đều và responsive tốt hơn → Grid tốt hơn. |
 | 5. Card sản phẩm | Kết hợp cả hai | Grid/Flex cho layout ngoài; bên trong card thường dùng Flexbox cột để đẩy nút xuống đáy bằng `margin-top: auto`. |
 
+C2:
+# Câu C2 — Debug Flexbox
 
+---
+
+# Lỗi 1 — Cards không đều chiều cao
+
+## Code lỗi
+
+```css
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 30%;
+    margin: 1.5%;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h3 {
+    font-size: 18px;
+}
+
+.card .btn {
+    padding: 10px;
+}
+```
+
+---
+
+# Nguyên nhân
+
+Các card có:
+
+- tiêu đề dài/ngắn khác nhau
+- nội dung khác nhau
+
+→ chiều cao card khác nhau.
+
+Nút `"Mua"` nằm ngay sau nội dung nên bị lệch.
+# Cách sửa
+
+Dùng Flexbox theo chiều dọc:
+
+```css
+display: flex;
+flex-direction: column;
+```
+
+và đẩy button xuống đáy bằng:
+
+```css
+margin-top: auto;
+```
+
+---
+
+# Code sửa
+
+```css
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 30%;
+    margin: 1.5%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h3 {
+    font-size: 18px;
+}
+
+.card .btn {
+    padding: 10px;
+
+    margin-top: auto;
+}
+```
+# Lỗi 2 — Item không nằm giữa màn hình
+
+## Code lỗi
+
+```css
+.hero {
+    height: 100vh;
+    display: flex;
+}
+
+.hero-content {
+    text-align: center;
+}
+```
+
+---
+
+# Nguyên nhân
+
+`display: flex`
+chỉ bật Flexbox.
+
+Mặc định:
+
+```css
+justify-content: flex-start;
+align-items: stretch;
+```
+
+→ item vẫn nằm góc trên trái.
+
+
+
+
+# Cách sửa
+
+Căn giữa ngang:
+
+```css
+justify-content: center;
+```
+
+Căn giữa dọc:
+
+```css
+align-items: center;
+```
+
+---
+
+# Code sửa
+
+```css
+.hero {
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+}
+```
+
+---
+
+
+
+---
+
+# Lỗi 3 — Sidebar bị co lại
+
+## Code lỗi
+
+```css
+.layout {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+}
+
+.content {
+    flex: 1;
+}
+```
+
+---
+
+# Nguyên nhân
+
+Trong Flexbox:
+
+```text
+flex-shrink mặc định = 1
+```
+
+→ sidebar được phép co lại khi content quá lớn.
+
+Nên:
+
+```text
+sidebar bị ép nhỏ hơn 250px
+```
+
+
+# Cách sửa
+
+Tắt shrink:
+
+```css
+flex-shrink: 0;
+```
+
+---
+
+# Code sửa
+
+```css
+.layout {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+
+    flex-shrink: 0;
+}
+
+.content {
+    flex: 1;
+}
+```
+
+---
